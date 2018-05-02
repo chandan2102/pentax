@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Oxyvo</title>
-	<link rel="icon" href="images/pentax.jpg" type="image/jpg" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="style.css?ver.0.0.1"/>
+	<title>Pentax</title>
+	<link rel="icon" href="images/pentax.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="style.css?ver.0.0.2"/>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 	<script>
-		
+		function scrollRightt(){
+			$('#content').animate({scrollLeft: 2880}, 500);
+		}
+		function scrollLeftt(){
+			$('#content').animate({scrollLeft: 0}, 500);
+		}
+		function setBackGrnd(arg){
+			$('#bodyy').css("background-image", "url('')");
+			$('#bodyy').css("background-image", "url('images/p"+arg+".jpg')");
+		}
 	</script>
 </head>
 <body>
-	<div id="main">
-		<div id="contents">
-			
-		</div>
+	<div class="main">
+		<div class="outer">
+	    	<div class="header">
+				<div><img class="menu" src="images/menu.png" style="float:left;"></div>
+				<div><img class="menu" src="images/option.png" style="float:right;"></div>
+				<div><p class="title">PENTAX</p></div>
+	    	</div>
+	    	<div id="bodyy"></div>
+
+			<div class="scroller">
+				<div>
+					<div class="left" onclick="scrollLeftt()"></div>
+					<div id="content" class="horizontal-scroll-wrapper">
+						<div>
+							<div class="img" onclick="setBackGrnd(2)" style="background: url(images/p2.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(1)" style="background: url(images/p1.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(3)" style="background: url(images/p3.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(4)" style="background: url(images/p4.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(5)" style="background: url(images/p5.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(6)" style="background: url(images/p6.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(7)" style="background: url(images/p7.jpg); background-size: cover; "></div>
+							<div class="img" onclick="setBackGrnd(8)" style="background: url(images/p8.jpg); background-size: cover; "></div>
+						</div>
+					</div>
+					<div class="right" onclick="scrollRightt()"></div>
+				</div>
+			</div>
+
+	    	<!-- <br> -->
+
+	    	<div class="navigator" style="text-align:center">
+	    	  <span class="dot" onclick="currentSlide(1)"></span> 
+	    	  <span class="dot" onclick="currentSlide(2)"></span> 
+	    	  <span class="dot" onclick="currentSlide(3)"></span> 
+	    	  <span class="dot" onclick="currentSlide(4)"></span>
+	    	  <span class="dot" onclick="currentSlide(5)"></span>
+	    	  <span class="dot" onclick="currentSlide(6)"></span> 
+	    	  <span class="dot" onclick="currentSlide(7)"></span> 
+	    	  <span class="dot" onclick="currentSlide(8)"></span>
+	    	</div>
+	    	
+	    </div>
 	</div>
 </body>
 </html>
+<!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->

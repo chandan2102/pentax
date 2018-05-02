@@ -3,17 +3,142 @@
 	margin:0px;
 }
 
-#main{
+.main{
+  width: 100%;
 	height: 637px;
-	width: 100%;
 	background: linear-gradient(0deg, #197EB2 0%, #D59A33 90%);
 	overflow: hidden;
+	
 }
 
-#contents{
-	width:90%;
-	height: 90%;
-	background-color: white;
-	margin:30px auto;
-	border-radius: 2px;
+.outer{
+  width: 600px;
+  height: 620px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.header{
+  width: 600px;
+  height: 40px;
+  background-color: black;
+}
+
+.title{
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: white;
+  font-size:10px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.menu{
+  width:10px; 
+  height:10px;
+  padding: 15px 12px;
+}
+
+#bodyy{
+  width: 600px;
+  height: 390px;
+  background-size: cover;
+  object-fit:fill;
+  /*background-color: lavender;*/
+  background-image: url(images/p1.jpg);
+}
+
+.scroller{
+  width: 100%;
+  height: 150px;
+  background: #111111EE;
+  box-sizing: border-box;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.horizontal-scroll-wrapper {
+  width: 500px;
+  height: 200px;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: transparent;
+
+  border: 0px solid red;
+
+  display: inline-block;
+  vertical-align: top;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.horizontal-scroll-wrapper > div{
+  width: 2000px;
+}
+
+.img{
+  width:85px;
+  height:60px;
+
+  border: 0px solid blue;
+
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+
+    float:left;
+    margin-left: 20px;
+    padding: 10px;
+
+  margin: 20px 10px;
+}
+
+.left{
+  width: 35px;
+  height: 35px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  
+  background: url(images/right.png);
+  background-size: cover;
+  border: 0px solid red;
+  
+  display: inline-block;
+  vertical-align: top;
+
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+.right{
+  width: 35px;
+  height: 35px;
+  
+  background: url(images/right.png);
+  background-size: cover;
+  border: 0px solid red;
+
+  display: inline-block;
+  vertical-align: top;
+
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+.navigator{
+  margin: 10px 0px;
+  background-color: lightgray;
+}
+
+.dot {
+  cursor: pointer;
+  height: 5px;
+  width: 5px;
+  margin: 2px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
