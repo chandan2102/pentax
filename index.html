@@ -23,46 +23,54 @@
 	<div class="main">
 		<div class="outer">
 	    	<div class="header">
-				<div><img class="menu" src="images/menu.png" style="float:left;"></div>
-				<div><img class="menu" src="images/option.png" style="float:right;"></div>
-				<div><p class="title">PENTAX</p></div>
+				<div colspan="4"><img class="menu" src="images/menu.png" style="float:left;"></div>
+				<div colspan="4"><img class="menu" src="images/option.png" style="float:right;"></div>
+				<div colspan="4"><p class="title">PENTAX</p></div>
 	    	</div>
-	    	<div id="bodyy"></div>
+	    	<div id="bodyy">
+	    		<div class="vertical-menu">
+					<h5>Menu 1</h5>
+					<a href="#">Link 1</a>
+					<h5>Menu 2</h5>
+					<a href="#">Link 2</a>
+					<h5>Menu 3</h5>
+					<a href="#">Link 3</a>
+					<h5>Menu 4</h5>
+					<a href="#">Link 4</a>
+	    		</div>
+	    	</div>
 
 			<div class="scroller">
 				<div>
-					<div class="left" onclick="scrollLeftt()"></div>
+					<!-- <div class="left" onclick="scrollLeftt()"></div> -->
 					<div id="content" class="horizontal-scroll-wrapper">
 						<div>
-							<div class="img" onclick="setBackGrnd(2)" style="background: url(images/p2.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(1)" style="background: url(images/p1.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(3)" style="background: url(images/p3.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(4)" style="background: url(images/p4.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(5)" style="background: url(images/p5.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(6)" style="background: url(images/p6.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(7)" style="background: url(images/p7.jpg); background-size: cover; "></div>
-							<div class="img" onclick="setBackGrnd(8)" style="background: url(images/p8.jpg); background-size: cover; "></div>
+							<div class="img" id="img1" onmouseover="setBackGrnd(1)" style="background: url(images/p1.jpg); background-size: cover; "></div>
+							<div class="img" id="img2" onmouseover="setBackGrnd(2)" style="background: url(images/p2.jpg); background-size: cover; "></div>
+							<div class="img" id="img3" onmouseover="setBackGrnd(3)" style="background: url(images/p3.jpg); background-size: cover; "></div>
+							<div class="img" id="img4" onmouseover="setBackGrnd(4)" style="background: url(images/p4.jpg); background-size: cover; "></div>
+							<div class="img" id="img5" onmouseover="setBackGrnd(5)" style="background: url(images/p5.jpg); background-size: cover; "></div>
+							<div class="img" id="img6" onmouseover="setBackGrnd(6)" style="background: url(images/p6.jpg); background-size: cover; "></div>
 						</div>
 					</div>
-					<div class="right" onclick="scrollRightt()"></div>
+					<!-- <div class="right" onclick="scrollRightt()"></div> -->
 				</div>
 			</div>
 
 	    	<!-- <br> -->
 
 	    	<div class="navigator" style="text-align:center">
-	    	  <span class="dot" onclick="currentSlide(1)"></span> 
-	    	  <span class="dot" onclick="currentSlide(2)"></span> 
-	    	  <span class="dot" onclick="currentSlide(3)"></span> 
-	    	  <span class="dot" onclick="currentSlide(4)"></span>
-	    	  <span class="dot" onclick="currentSlide(5)"></span>
-	    	  <span class="dot" onclick="currentSlide(6)"></span> 
-	    	  <span class="dot" onclick="currentSlide(7)"></span> 
-	    	  <span class="dot" onclick="currentSlide(8)"></span>
+	    	  <span class="left" onclick="scrollLeftt()"></span>
+		    	  <span class="dot" onmouseover="setBackGrnd(1)"></span> 
+		    	  <span class="dot" onmouseover="setBackGrnd(2)"></span> 
+		    	  <span class="dot" onmouseover="setBackGrnd(3)"></span> 
+		    	  <span class="dot" onmouseover="setBackGrnd(4)"></span>
+		    	  <span class="dot" onmouseover="setBackGrnd(5)"></span>
+		    	  <span class="dot" onmouseover="setBackGrnd(6)"></span> 
+	    	  <span class="right" onclick="scrollRightt()"></span>
 	    	</div>
 	    	
 	    </div>
 	</div>
 </body>
 </html>
-<!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
