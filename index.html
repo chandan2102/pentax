@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Pentax</title>
-	<link rel="icon" href="images/pentax.png" type="image/png" sizes="16x16">
+	<link rel="icon" href="images/pentax2.png" type="image/png" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="style.css?ver.0.0.2"/>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 	<script>
 		function scrollRightt(){
-			$('#content').animate({scrollLeft: 2880}, 500);
+			$('#content').animate({scrollLeft: 300}, 500);
 		}
 		function scrollLeftt(){
 			$('#content').animate({scrollLeft: 0}, 500);
@@ -17,57 +17,69 @@
 			$('#bodyy').css("background-image", "url('')");
 			$('#bodyy').css("background-image", "url('images/p"+arg+".jpg')");
 		}
+		function scaleUp(arg){
+			$(".img").css("transform", "scale(1)");
+			$(".img").css("z-index", "2");
+			$(".img").css("position", "relative");
+
+
+			$("#img"+arg+"").css("transform", "scale(1.7)");
+			$("#img"+arg+"").css("z-index", "4");
+			$("#img"+arg+"").css("position", "relative");
+
+			$("#img"+(arg+1)+"").css("transform", "scale(1.3)");
+			$("#img"+(arg+1)+"").css("z-index", "3");
+			$("#img"+(arg+1)+"").css("position", "relative");
+
+			$("#img"+(arg-1)+"").css("transform", "scale(1.3)");
+			$("#img"+(arg-1)+"").css("z-index", "3");
+			$("#img"+(arg-1)+"").css("position", "relative");
+		}
 	</script>
 </head>
 <body>
 	<div class="main">
 		<div class="outer">
 	    	<div class="header">
-				<div colspan="4"><img class="menu" src="images/menu.png" style="float:left;"></div>
-				<div colspan="4"><img class="menu" src="images/option.png" style="float:right;"></div>
+				<div colspan="4"><img class="menu" src="images/menu.png" style="float:left;"/></div>
+				<div colspan="4"><img class="menu" src="images/option.png" style="float:right;"/></div>
 				<div colspan="4"><p class="title">PENTAX</p></div>
 	    	</div>
 	    	<div id="bodyy">
 	    		<div class="vertical-menu">
-					<h5>Menu 1</h5>
-					<a href="#">Link 1</a>
-					<h5>Menu 2</h5>
-					<a href="#">Link 2</a>
-					<h5>Menu 3</h5>
-					<a href="#">Link 3</a>
-					<h5>Menu 4</h5>
-					<a href="#">Link 4</a>
+					<h5>Culture</h5>
+					<a href="#">Pentax Vision</a>
+					<h5>Fashion</h5>
+					<a href="#">Pentax Street</a>
+					<h5>Thought</h5>
+					<a href="#">Pentax Blog</a>
+					<h5>Style</h5>
+					<a href="#">Pentax Life</a>
 	    		</div>
 	    	</div>
 
 			<div class="scroller">
-				<div>
-					<!-- <div class="left" onclick="scrollLeftt()"></div> -->
 					<div id="content" class="horizontal-scroll-wrapper">
 						<div>
-							<div class="img" id="img1" onmouseover="setBackGrnd(1)" style="background: url(images/p1.jpg); background-size: cover; "></div>
-							<div class="img" id="img2" onmouseover="setBackGrnd(2)" style="background: url(images/p2.jpg); background-size: cover; "></div>
-							<div class="img" id="img3" onmouseover="setBackGrnd(3)" style="background: url(images/p3.jpg); background-size: cover; "></div>
-							<div class="img" id="img4" onmouseover="setBackGrnd(4)" style="background: url(images/p4.jpg); background-size: cover; "></div>
-							<div class="img" id="img5" onmouseover="setBackGrnd(5)" style="background: url(images/p5.jpg); background-size: cover; "></div>
-							<div class="img" id="img6" onmouseover="setBackGrnd(6)" style="background: url(images/p6.jpg); background-size: cover; "></div>
+							<div class="img" id="img1" onclick="setBackGrnd(1)" onmouseover="scaleUp(1)" style="background: url(images/p1.jpg); background-size: cover; "></div>
+							<div class="img" id="img2" onclick="setBackGrnd(2)" onmouseover="scaleUp(2)" style="background: url(images/p2.jpg); background-size: cover; "></div>
+							<div class="img" id="img3" onclick="setBackGrnd(3)" onmouseover="scaleUp(3)" style="background: url(images/p3.jpg); background-size: cover; "></div>
+							<div class="img" id="img4" onclick="setBackGrnd(4)" onmouseover="scaleUp(4)" style="background: url(images/p4.jpg); background-size: cover; "></div>
+							<div class="img" id="img5" onclick="setBackGrnd(5)" onmouseover="scaleUp(5)" style="background: url(images/p5.jpg); background-size: cover; "></div>
+							<div class="img" id="img6" onclick="setBackGrnd(6)" onmouseover="scaleUp(6)" style="background: url(images/p6.jpg); background-size: cover; "></div>
 						</div>
 					</div>
-					<!-- <div class="right" onclick="scrollRightt()"></div> -->
-				</div>
 			</div>
 
-	    	<!-- <br> -->
-
-	    	<div class="navigator" style="text-align:center">
-	    	  <span class="left" onclick="scrollLeftt()"></span>
+	    	<div class="navigator" style="text-align:center; margin-top: -20px;">
+	    	  <div class="left" onclick="scrollLeftt()"></div>
 		    	  <span class="dot" onmouseover="setBackGrnd(1)"></span> 
 		    	  <span class="dot" onmouseover="setBackGrnd(2)"></span> 
 		    	  <span class="dot" onmouseover="setBackGrnd(3)"></span> 
 		    	  <span class="dot" onmouseover="setBackGrnd(4)"></span>
 		    	  <span class="dot" onmouseover="setBackGrnd(5)"></span>
 		    	  <span class="dot" onmouseover="setBackGrnd(6)"></span> 
-	    	  <span class="right" onclick="scrollRightt()"></span>
+	    	  <div class="right" onclick="scrollRightt()"></div>
 	    	</div>
 	    	
 	    </div>
